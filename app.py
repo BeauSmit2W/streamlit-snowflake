@@ -23,3 +23,5 @@ def run_query(query):
         return df
     
 df = run_query(f"select * from FOOD_INSPECTIONS_SMALL")
+
+st.dataframe(df)
