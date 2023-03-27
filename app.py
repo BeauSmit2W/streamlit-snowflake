@@ -21,7 +21,9 @@ def run_query(query):
         dat = cur.fetchall()
         df = pd.DataFrame(dat, columns=[col[0] for col in cur.description])
         return df
-    
+
+st.header("Snowflake Table:")
+
 df = run_query(f"select * from FOOD_INSPECTIONS_SMALL")
 
 st.dataframe(df)
